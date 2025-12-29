@@ -1,0 +1,161 @@
+/*
+  RoadGuard - style.css
+  Mobile-first, responsive, dark + light theme support
+*/
+:root{
+  --bg: #0b0f12;
+  --surface: #0f1720;
+  --card-bg: #0c1317;
+  --text: #e6eef5;
+  --muted: #98a3ad;
+  --accent: #ff3b3b; /* emergency red */
+  --primary: #0ea5a4; /* teal accent for CTAs */
+  --glass: rgba(255,255,255,0.03);
+  --radius: 12px;
+  --max-width: 1080px;
+}
+
+/* Light theme variables */
+:root.light{
+  --bg: #f7f9fb;
+  --surface: #ffffff;
+  --card-bg: #fbfdff;
+  --text: #0b1220;
+  --muted: #4b5563;
+  --accent: #d32b2b;
+  --primary: #006b66;
+  --glass: rgba(2,6,23,0.04);
+}
+
+/* Base page styles */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+.container{
+  width:calc(100% - 32px);
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+
+/* Header */
+.site-header{
+  position:sticky;
+  top:0;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.12));
+  z-index:60;
+  border-bottom:1px solid rgba(255,255,255,0.02);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 16px;
+}
+.brand{
+  color:var(--text);
+  font-weight:700;
+  font-size:18px;
+  text-decoration:none;
+}
+.nav{display:none;gap:18px;margin-left:auto}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600}
+.header-actions{display:flex;align-items:center;gap:10px;margin-left:12px}
+.sos-btn{
+  background:var(--accent);
+  color:white;
+  border:0;
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:700;
+  box-shadow:0 6px 20px rgba(255,59,59,0.18);
+}
+.theme-toggle{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px;border-radius:8px}
+
+/* Hero */
+.hero{padding:28px 0}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+.hero-copy h1{font-size:24px;margin:0 0 8px}
+.lead{color:var(--text);opacity:0.95;margin:0 0 12px}
+.muted{color:var(--muted)}
+.hero-visual{display:block}
+.hero-svg{width:100%;height:180px;border-radius:12px}
+.hero-ctas{display:flex;gap:10px;margin:12px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:10px;border:1px solid transparent;background:transparent;color:var(--text);cursor:pointer}
+.btn-primary{background:var(--primary);color:white;border-color:rgba(0,0,0,0.08)}
+.btn-outline{border:1px solid rgba(255,255,255,0.06);color:var(--text);background:transparent}
+
+/* Sections */
+.section{padding:18px 0}
+.section.alt{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+h2{margin:0 0 10px;font-size:20px}
+
+/* Service cards */
+.cards{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+.card{background:var(--card-bg);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+.card .icon{font-size:28px}
+
+/* Steps */
+.steps{display:grid;gap:12px}
+.step{display:flex;gap:12px;align-items:flex-start}
+.step-num{width:36px;height:36px;border-radius:10px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700}
+
+.login-ui{margin-top:12px}
+.input-row{display:flex;gap:8px}
+input[type=tel]{flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+
+/* Pricing */
+.pricing-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+.pricing-card{background:var(--card-bg);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+.pricing-card.recommended{box-shadow:0 8px 32px rgba(0,0,0,0.25);transform:translateY(-4px)}
+.price{font-size:22px;font-weight:800;margin:8px 0}
+.price .small{font-size:12px;font-weight:600;color:var(--muted);margin-left:6px}
+
+.pricing-note{margin-top:10px}
+
+/* Why grid */
+.why-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.why-item{background:var(--card-bg);padding:14px;border-radius:12px}
+
+/* Coverage */
+.coverage-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.map-placeholder svg{width:100%;height:160px;border-radius:10px}
+
+/* Footer */
+.site-footer{padding:20px 0;border-top:1px solid rgba(255,255,255,0.02);margin-top:30px}
+.footer-grid{display:grid;gap:12px}
+
+/* Desktop and larger screens */
+@media(min-width:720px){
+  .nav{display:flex}
+  .hero-grid{grid-template-columns:1fr 420px}
+  .hero-svg{height:220px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .pricing-grid{grid-template-columns:1fr 1fr 1fr}
+  .why-grid{grid-template-columns:repeat(4,1fr)}
+  .coverage-grid{grid-template-columns:1fr 320px}
+  .footer-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* Utility */
+.large{font-size:18px}
+.muted{color:var(--muted)}
+
+/* Accessibility focus */
+:focus{outline:3px solid rgba(14,165,164,0.12);outline-offset:2px}
+
+/* Small helpers */
+.recommended .btn-primary{background:linear-gradient(90deg,var(--primary),#12b1a9)}
+
+/* Make content readable when in light root */
+body.light a{color:var(--primary)}

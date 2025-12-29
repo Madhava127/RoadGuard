@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="RoadGuard — Affordable, emergency-first roadside assistance for two & four-wheelers across India. Low subscription, fast response.">
+		<meta name="theme-color" content="#0b0f12">
+		<title>RoadGuard — Affordable Roadside Assistance (India)</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<!-- Sticky Header -->
+		<header class="site-header" id="site-header">
+			<div class="container header-inner">
+				<a class="brand" href="#home">RoadGuard</a>
+				<nav class="nav" aria-label="Primary Navigation">
+					<a href="#services">Services</a>
+					<a href="#how">How It Works</a>
+					<a href="#pricing">Pricing</a>
+					<a href="#coverage">Coverage</a>
+					<a href="#login" id="login-link">Login</a>
+				</nav>
+				<div class="header-actions">
+					<button class="sos-btn" id="sos-btn" aria-label="Emergency SOS">SOS</button>
+					<button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">●</button>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main content -->
+		<main>
+			<!-- Hero -->
+			<section class="hero" id="home">
+				<div class="container hero-grid">
+					<div class="hero-copy">
+						<h1>Fast, reliable roadside help — when every minute matters</h1>
+						<p class="lead">Emergency-first assistance for two & four-wheelers — with subscription fees sized for commuters, not corporates.</p>
+						<div class="hero-ctas">
+							<a href="#get-help" class="btn btn-primary" id="get-help">Get Help Now</a>
+							<button class="btn btn-outline" id="enable-location">Enable Live Location</button>
+						</div>
+						<p class="muted">Lowest subscription plans in the market — transparent pricing, verified mechanics, 24/7 response.</p>
+					</div>
+					<div class="hero-visual">
+						<!-- Illustrative SVG placeholder -->
+						<svg viewBox="0 0 400 300" class="hero-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="roadside assistance illustration">
+							<rect x="0" y="0" width="100%" height="100%" rx="12" fill="var(--card-bg)" />
+							<g transform="translate(20,40)" fill="none" stroke="var(--accent)" stroke-width="2">
+								<path d="M10 180 L60 80 L120 140 L200 60" stroke-linecap="round"/>
+							</g>
+							<text x="20" y="30" fill="var(--muted)" font-size="12">RoadGuard — help dispatched instantly</text>
+						</svg>
+					</div>
+				</div>
+			</section>
+
+			<!-- Services -->
+			<section class="section" id="services">
+				<div class="container">
+					<h2>Our Services</h2>
+					<p class="muted">Built for commuters — fast fixes and safe towing when needed.</p>
+					<div class="cards">
+						<article class="card">
+							<div class="icon">🔧</div>
+							<h3>Flat Tyre Repair</h3>
+							<p>On-the-spot tyre puncture & replacement assistance for two and four-wheelers.</p>
+						</article>
+						<article class="card">
+							<div class="icon">⛽</div>
+							<h3>Emergency Fuel Delivery</h3>
+							<p>Run out of fuel? We deliver and get you moving — quick, safe, and compliant.</p>
+						</article>
+						<article class="card">
+							<div class="icon">🔋</div>
+							<h3>Battery Jump Start</h3>
+							<p>Flat battery? Our technicians jump-start vehicles on site with OEM-safe equipment.</p>
+						</article>
+						<article class="card">
+							<div class="icon">🚚</div>
+							<h3>Towing Service</h3>
+							<p>Trusted towing to nearby service centres with transparent, meter-based pricing.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- How It Works -->
+			<section class="section alt" id="how">
+				<div class="container">
+					<h2>How It Works</h2>
+					<div class="steps">
+						<div class="step">
+							<div class="step-num">1</div>
+							<div>
+								<h4>Login with mobile number</h4>
+								<p class="muted">Quick, OTP-based login. (UI placeholder)</p>
+							</div>
+						</div>
+						<div class="step">
+							<div class="step-num">2</div>
+							<div>
+								<h4>Share live location</h4>
+								<p class="muted">Enable live location so we can dispatch the nearest mechanic instantly.</p>
+							</div>
+						</div>
+						<div class="step">
+							<div class="step-num">3</div>
+							<div>
+								<h4>Nearest mechanic dispatched</h4>
+								<p class="muted">Verified mechanics arrive fast — emergency-first routing.</p>
+							</div>
+						</div>
+					</div>
+					<div class="login-ui">
+						<form id="login-form" aria-label="Login form (UI)">
+							<label for="mobile">Mobile number</label>
+							<div class="input-row">
+								<input type="tel" id="mobile" name="mobile" placeholder="Enter 10-digit mobile" maxlength="10" inputmode="numeric">
+								<button class="btn" type="button" id="send-otp">Send OTP</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<!-- Pricing -->
+			<section class="section" id="pricing">
+				<div class="container">
+					<h2>Pricing</h2>
+					<p class="muted">LOW SUBSCRIPTION FEES — essential protection without the premium price.</p>
+					<div class="pricing-grid">
+						<div class="pricing-card">
+							<h3>Monthly</h3>
+							<div class="price">₹49<span class="small">/mo</span></div>
+							<p class="muted">Pay-as-you-go with discounted call-outs for members.</p>
+							<ul>
+								<li>Priority emergency dispatch</li>
+								<li>Up to 2 calls/month</li>
+								<li>Verified mechanics</li>
+							</ul>
+							<a class="btn btn-primary">Subscribe</a>
+						</div>
+						<div class="pricing-card recommended">
+							<h3>Annual</h3>
+							<div class="price">₹499<span class="small">/yr</span></div>
+							<p class="muted">Best value for regular commuters — less than one cup of coffee a month.</p>
+							<ul>
+								<li>Unlimited emergency calls</li>
+								<li>Free towing up to 10km*</li>
+								<li>24/7 priority support</li>
+							</ul>
+							<a class="btn btn-primary">Choose Annual</a>
+						</div>
+						<div class="pricing-card">
+							<h3>Pay Per Use</h3>
+							<div class="price">₹199<span class="small">/call</span></div>
+							<p class="muted">No subscription — pay when you need emergency help.</p>
+							<ul>
+								<li>Transparent call-out fee</li>
+								<li>Secure payments</li>
+							</ul>
+							<a class="btn btn-outline">Request Now</a>
+						</div>
+					</div>
+					<div class="pricing-note muted">Compared to traditional providers, RoadGuard focuses on low-cost subscriptions and emergency-first routing to reduce wait times and cost.</div>
+				</div>
+			</section>
+
+			<!-- Why RoadGuard -->
+			<section class="section" id="why">
+				<div class="container">
+					<h2>Why RoadGuard</h2>
+					<div class="why-grid">
+						<div class="why-item">
+							<h4>Verified mechanics</h4>
+							<p class="muted">Background-checked technicians with ratings and service guarantees.</p>
+						</div>
+						<div class="why-item">
+							<h4>Faster response</h4>
+							<p class="muted">Emergency-first routing and city-level partner networks reduce arrival time.</p>
+						</div>
+						<div class="why-item">
+							<h4>Lower cost</h4>
+							<p class="muted">Subscription fees designed for commuters — not high-ticket corporate plans.</p>
+						</div>
+						<div class="why-item">
+							<h4>24/7 Availability</h4>
+							<p class="muted">Always-on dispatch centers and local partners across cities.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Coverage -->
+			<section class="section alt" id="coverage">
+				<div class="container">
+					<h2>Coverage</h2>
+					<p class="muted">Focused on Tier 1 & Tier 2 cities across India — expanding rapidly.</p>
+					<div class="coverage-grid">
+						<div class="map-placeholder">
+							<!-- Simple stylized India map placeholder -->
+							<svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+								<rect width="100%" height="100%" fill="var(--card-bg)" rx="8"/>
+								<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="var(--muted)">India coverage map (placeholder)</text>
+							</svg>
+						</div>
+						<div class="coverage-list">
+							<h4>Available cities</h4>
+							<ul>
+								<li>Mumbai</li>
+								<li>Delhi NCR</li>
+								<li>Bengaluru</li>
+								<li>Chennai</li>
+								<li>Pune</li>
+								<li>Hyderabad</li>
+								<li>Ahmedabad</li>
+								<li>Lucknow</li>
+							</ul>
+							<p class="muted">If your city isn't listed yet — join our waitlist for priority activation.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer class="site-footer">
+				<div class="container footer-grid">
+					<div>
+						<strong>Emergency</strong>
+						<p class="large">Call: <a href="tel:+911234567890">+91 12345 67890</a></p>
+						<p class="muted">Or tap the red <strong>SOS</strong> button to request immediate help.</p>
+					</div>
+					<div>
+						<strong>Company</strong>
+						<ul>
+							<li><a href="#terms">Terms</a></li>
+							<li><a href="#privacy">Privacy</a></li>
+						</ul>
+					</div>
+					<div>
+						<strong>Contact</strong>
+						<p class="muted">support@roadguard.example</p>
+						<p class="muted">© RoadGuard 2025</p>
+					</div>
+				</div>
+			</footer>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
+</html>
